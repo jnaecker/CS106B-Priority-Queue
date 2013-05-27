@@ -85,7 +85,10 @@ string DoublyLinkedListPriorityQueue::dequeueMin() {
     //edge case 1: cell to remove is at beginning of list
     if (cellToRemove->previous == NULL) {
         head = cellToRemove->next;
-        cellToRemove->next->previous = NULL;
+        if ( cellToRemove->next != NULL) { // if this is already not the last element in the list
+            cellToRemove->next->previous = NULL;
+        }
+        
     }
     
     //edge case 2: cell to remove is at end of list
