@@ -22,7 +22,7 @@ DoublyLinkedListPriorityQueue::~DoublyLinkedListPriorityQueue() {
 
 int DoublyLinkedListPriorityQueue::size() {
 	int result = 0;
-    for (Cell* cell; cell != NULL; cell = cell->next) {
+    for (Cell* cell = head; cell != NULL; cell = cell->next) {
         result++;
     }
     return result;
@@ -40,8 +40,10 @@ void DoublyLinkedListPriorityQueue::enqueue(string value) {
     newCell->previous = NULL;
     newCell->next = head;
     
-    // correct pointer of previous first cell
-    head->previous = newCell;
+    if (head != NULL) {
+        // correct pointer of previous first cell
+        head->previous = newCell;
+    }
     
     // move pointer for head
     head = newCell;
