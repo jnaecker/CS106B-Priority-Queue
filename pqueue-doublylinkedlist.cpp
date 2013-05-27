@@ -9,38 +9,97 @@
 #include "error.h"
 
 DoublyLinkedListPriorityQueue::DoublyLinkedListPriorityQueue() {
-	// TODO: Fill this in!
+	head = NULL;
 }
 
 DoublyLinkedListPriorityQueue::~DoublyLinkedListPriorityQueue() {
-	// TODO: Fill this in!
+    while (head != NULL) {
+        Cell* next = head->next;
+        delete head;
+        head = next;
+    }
 }
 
 int DoublyLinkedListPriorityQueue::size() {
-	// TODO: Fill this in!
-	
-	return 0;
+	int result = 0;
+    for (Cell* cell; cell != NULL; cell = cell->next) {
+        result++;
+    }
+    return result;
 }
 
 bool DoublyLinkedListPriorityQueue::isEmpty() {
-	// TODO: Fill this in!
-	
-	return true;
+	return (head == NULL);
 }
 
 void DoublyLinkedListPriorityQueue::enqueue(string value) {
-	// TODO: Fill this in!
+    
+    // make new entry
+	Cell* newCell = new Cell;
+    newCell->value = value;
+    newCell->previous = NULL;
+    newCell->next = head;
+    
+    // correct pointer of previous first cell
+    head->previous = newCell;
+    
+    // move pointer for head
+    head = newCell;
+
 }
 
 string DoublyLinkedListPriorityQueue::peek() {
-	// TODO: Fill this in!
-	
-	return "";
+	if (isEmpty()) {
+        error("Queue is empty.");
+    }
+    
+    string result = head->value;
+    for (Cell* cell = head; cell !=NULL; cell = cell->next) {
+        if (cell->value < result) {
+            result = cell->value;
+        }
+    }
+    
+    return result;
 }
 
 string DoublyLinkedListPriorityQueue::dequeueMin() {
-	// TODO: Fill this in!
-	
-	return "";
+    if (isEmpty()) {
+        error("Queue is empty.");
+    }
+    
+    // find min to remove
+    string result = head->value;
+    Cell* cellToRemove = head;
+    
+    for (Cell* cell = head; cell !=NULL; cell = cell->next) {
+        if (cell->value < result) {
+            result = cell->value;
+            cellToRemove = cell;
+        }
+    }
+    
+    // clip out cell to remove
+    //edge case 1: cell to remove is at beginning of list
+    if (cellToRemove->previous == NULL) {
+        head = cellToRemove->next;
+        cellToRemove->next->previous = NULL;
+    }
+    
+    //edge case 2: cell to remove is at end of list
+    else if (cellToRemove->next == NULL) {
+        cellToRemove->previous->next = NULL;
+    }
+    
+    // otherwise we are in the middle of the list
+    else {
+        cellToRemove->previous->next = cellToRemove->next;
+        cellToRemove->next->previous = cellToRemove->previous;
+
+    }
+    
+    delete cellToRemove;
+    return result;
+    
 }
 

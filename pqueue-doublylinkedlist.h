@@ -41,9 +41,13 @@ public:
 	string dequeueMin();
 
 private:
-	// TODO: Fill this in with the implementation of your doubly-linked list
-	// priority queue.  You can add any fields, types, or methods that you
-	// wish.
+    struct Cell {
+        string value;
+        Cell* next;
+        Cell* previous;
+    };
+    
+    Cell* head;
 };
 
 #endif
