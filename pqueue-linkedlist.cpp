@@ -37,17 +37,29 @@ void LinkedListPriorityQueue::enqueue(string value) {
     newCell->value = value;
     newCell->next = NULL;
     
+    // if nothing in pqueue
     if (head == NULL) {
         head = newCell;
+        
     } else {
+        
         for (Cell* cell = head; cell != NULL; cell = cell->next) {
             Cell* nextCell = cell->next;
             
+            // if the current cell is the first
+            if (cell == head && newCell->value <= head->value) {
+                newCell->next = head;
+                head = newCell;
+                return;
+            }
+            
+            // if the current cell is the last
             if(nextCell == NULL) {
                 cell->next = newCell;
                 return;
             }
             
+            // otherwise
             if (value > cell->value && value <= nextCell->value) {
                 newCell->next = nextCell;
                 cell->next = newCell;
