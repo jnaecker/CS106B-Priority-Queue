@@ -1,0 +1,250 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BC7DFE217418C2B00EB0484 /* pqueue-doublylinkedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFD717418C2B00EB0484 /* pqueue-doublylinkedlist.cpp */; };
+		2BC7DFE317418C2B00EB0484 /* pqueue-extra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFD917418C2B00EB0484 /* pqueue-extra.cpp */; };
+		2BC7DFE417418C2B00EB0484 /* pqueue-heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFDB17418C2B00EB0484 /* pqueue-heap.cpp */; };
+		2BC7DFE517418C2B00EB0484 /* pqueue-linkedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFDD17418C2B00EB0484 /* pqueue-linkedlist.cpp */; };
+		2BC7DFE617418C2B00EB0484 /* pqueue-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFDF17418C2B00EB0484 /* pqueue-test.cpp */; };
+		2BC7DFE717418C2B00EB0484 /* pqueue-vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7DFE017418C2B00EB0484 /* pqueue-vector.cpp */; };
+		E3DDB4120D2F60C500348E1D /* libStanfordCPPLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DDB4110D2F60C500348E1D /* libStanfordCPPLib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BC7DFD717418C2B00EB0484 /* pqueue-doublylinkedlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-doublylinkedlist.cpp"; sourceTree = "<group>"; };
+		2BC7DFD817418C2B00EB0484 /* pqueue-doublylinkedlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pqueue-doublylinkedlist.h"; sourceTree = "<group>"; };
+		2BC7DFD917418C2B00EB0484 /* pqueue-extra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-extra.cpp"; sourceTree = "<group>"; };
+		2BC7DFDA17418C2B00EB0484 /* pqueue-extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pqueue-extra.h"; sourceTree = "<group>"; };
+		2BC7DFDB17418C2B00EB0484 /* pqueue-heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-heap.cpp"; sourceTree = "<group>"; };
+		2BC7DFDC17418C2B00EB0484 /* pqueue-heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pqueue-heap.h"; sourceTree = "<group>"; };
+		2BC7DFDD17418C2B00EB0484 /* pqueue-linkedlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-linkedlist.cpp"; sourceTree = "<group>"; };
+		2BC7DFDE17418C2B00EB0484 /* pqueue-linkedlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pqueue-linkedlist.h"; sourceTree = "<group>"; };
+		2BC7DFDF17418C2B00EB0484 /* pqueue-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-test.cpp"; sourceTree = "<group>"; };
+		2BC7DFE017418C2B00EB0484 /* pqueue-vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "pqueue-vector.cpp"; sourceTree = "<group>"; };
+		2BC7DFE117418C2B00EB0484 /* pqueue-vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pqueue-vector.h"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Priority Queue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Priority Queue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81255C316B4AC8C00098A07 /* spl.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = spl.jar; sourceTree = "<group>"; };
+		E3DDB4110D2F60C500348E1D /* libStanfordCPPLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStanfordCPPLib.a; path = StanfordCPPLib/libStanfordCPPLib.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3DDB4120D2F60C500348E1D /* libStanfordCPPLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Priority Queue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				2BC7DFD717418C2B00EB0484 /* pqueue-doublylinkedlist.cpp */,
+				2BC7DFD817418C2B00EB0484 /* pqueue-doublylinkedlist.h */,
+				2BC7DFD917418C2B00EB0484 /* pqueue-extra.cpp */,
+				2BC7DFDA17418C2B00EB0484 /* pqueue-extra.h */,
+				2BC7DFDB17418C2B00EB0484 /* pqueue-heap.cpp */,
+				2BC7DFDC17418C2B00EB0484 /* pqueue-heap.h */,
+				2BC7DFDD17418C2B00EB0484 /* pqueue-linkedlist.cpp */,
+				2BC7DFDE17418C2B00EB0484 /* pqueue-linkedlist.h */,
+				2BC7DFDF17418C2B00EB0484 /* pqueue-test.cpp */,
+				2BC7DFE017418C2B00EB0484 /* pqueue-vector.cpp */,
+				2BC7DFE117418C2B00EB0484 /* pqueue-vector.h */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A81255C316B4AC8C00098A07 /* spl.jar */,
+				E3DDB4110D2F60C500348E1D /* libStanfordCPPLib.a */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Priority Queue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Priority Queue" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				A80A447516B8AFEF00A10865 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Priority Queue";
+			productInstallPath = "$(HOME)/Applications";
+			productName = Basic;
+			productReference = 8D1107320486CEB800E47090 /* Priority Queue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Priority Queue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Basic */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Priority Queue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A80A447516B8AFEF00A10865 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -r `ls \"$SRCROOT\" | fgrep -v StanfordCPPLib | fgrep -v Info.plist | grep -v '[.]app$' | grep -v '[.]xcodeproj$' | grep -v '[.]o$'` \"$SYMROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC7DFE217418C2B00EB0484 /* pqueue-doublylinkedlist.cpp in Sources */,
+				2BC7DFE317418C2B00EB0484 /* pqueue-extra.cpp in Sources */,
+				2BC7DFE417418C2B00EB0484 /* pqueue-heap.cpp in Sources */,
+				2BC7DFE517418C2B00EB0484 /* pqueue-linkedlist.cpp in Sources */,
+				2BC7DFE617418C2B00EB0484 /* pqueue-test.cpp in Sources */,
+				2BC7DFE717418C2B00EB0484 /* pqueue-vector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/tmp/Priority Queue/build";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/StanfordCPPLib\"";
+				PRODUCT_NAME = "Priority Queue";
+				SDKROOT = macosx10.8;
+				SYMROOT = "/tmp/Priority Queue/build";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = .;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = StanfordCPPLib;
+				OTHER_CFLAGS = "-fstack-check";
+				SDKROOT = macosx10.8;
+				USER_HEADER_SEARCH_PATHS = StanfordCPPLib;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-sign-compare",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Priority Queue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Priority Queue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
