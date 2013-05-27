@@ -9,7 +9,7 @@
 #include "error.h"
 
 VectorPriorityQueue::VectorPriorityQueue() {
-	// TODO: Fill this in!
+	Vector<string> elems;
 }
 
 VectorPriorityQueue::~VectorPriorityQueue() {
@@ -17,30 +17,49 @@ VectorPriorityQueue::~VectorPriorityQueue() {
 }
 
 int VectorPriorityQueue::size() {
-	// TODO: Fill this in!
-	
-	return 0;
+    return elems.size();
 }
 
 bool VectorPriorityQueue::isEmpty() {
-	// TODO: Fill this in!
-	
-	return true;
+    return elems.size() == 0;
 }
 
 void VectorPriorityQueue::enqueue(string value) {
-	// TODO: Fill this in!
+	elems += value;
 }
 
 string VectorPriorityQueue::peek() {
-	// TODO: Fill this in!
-	
-	return "";
+	if (isEmpty()) {
+        error("Nothing in queue.");
+    }
+    
+    string result = elems[0];
+    for (int i = 1; i < elems.size(); i++) {
+        if (elems[i] < result) {
+            result = elems[i];
+        }
+        
+    }
+    return result;
+    
 }
 
 string VectorPriorityQueue::dequeueMin() {
-	// TODO: Fill this in!
-	
-	return "";
+	if (isEmpty()) {
+        error("Nothing in queue.");
+    }
+    
+    int loc = 0;
+    string first = elems[loc];
+    for (int i = 1; i < elems.size(); i++) {
+        if (elems[i] < first) {
+            first = elems[i];
+            loc = i;
+        }
+        
+    }
+    
+    elems.remove(loc);
+    return first;
 }
 

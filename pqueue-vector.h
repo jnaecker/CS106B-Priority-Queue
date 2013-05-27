@@ -8,6 +8,7 @@
 #define PQueue_Vector_Included
 
 #include <string>
+#include "vector.h"
 using namespace std;
 
 /* A class representing a priority queue backed by an
@@ -32,7 +33,7 @@ public:
 	
 	/* Returns, but does not remove, the lexicographically first string in the
 	 * priority queue.
-	 */
+     */
 	string peek();
 	
 	/* Returns and removes the lexicographically first string in the
@@ -41,9 +42,8 @@ public:
 	string dequeueMin();
 
 private:
-	// TODO: Fill this in with the implementation of your unsorted vector
-	// priority queue.  You can add any fields, types, or methods that you
-	// wish.
+	Vector<string> elems;
+    
 };
 
 #endif
