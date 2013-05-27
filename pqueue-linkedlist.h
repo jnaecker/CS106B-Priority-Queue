@@ -41,9 +41,12 @@ public:
 	string dequeueMin();
 	
 private:
-	// TODO: Fill this in with the implementation of your sorted linked list
-	// priority queue.  You can add any fields, types, or methods that you
-	// wish.
+    struct Cell {
+        string value;
+        Cell* next;
+    };
+    
+    Cell* head;
 };
 
 #endif
