@@ -37,7 +37,7 @@ void HeapPriorityQueue::enqueue(string value) {
     elems[logicalLength] = value;
     logicalLength++;
     
-    bubbleUp(logicalLength);
+    bubbleUp(logicalLength -1);
 }
 
 string HeapPriorityQueue::peek() {
