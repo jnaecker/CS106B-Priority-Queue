@@ -95,20 +95,30 @@ void HeapPriorityQueue::bubbleUp(int childPos) {
 
 void HeapPriorityQueue::bubbleDown(int parentPos) {
     
-
-}
-
-void HeapPriorityQueue::bubbleDownHelper(int parentPos, bool firstChild) {
-    int childPos = firstChild ? 2*(parentPos) : 2*(parentPos+1);
+    int childPosLeft = 2*(parentPos + 1 ) - 1;
+    int childPosRight = 2*(parentPos + 1 );
     
-    string parent = elems[parentPos];
-    string child = elems[childPos];
+    // edge case 1: no children
+    if (childPosLeft > logicalLength - 1) return;
     
-    if (childPos < logicalLength && parent > child) {
-        elems[childPos] = parent;
-        elems[parentPos] = child;
-        bubbleDown(childPos);
+    // edge case 2: one child only
+    int childMinPos = childPosLeft;
+    
+    // main case: has two children
+    if (childPosRight <= logicalLength - 1) {
+        childMinPos = elems[childPosLeft] < elems[childPosRight] ? childPosLeft : childPosRight;
     }
+    
+    string childMin = elems[childMinPos];
+    string parent = elems[parentPos];
+    
+    if (parent > childMin) {
+        elems[parentPos] = childMin;
+        elems[childMinPos] = parent;
+        bubbleDown(childMinPos);
+    }
+    
+    
 }
 
 

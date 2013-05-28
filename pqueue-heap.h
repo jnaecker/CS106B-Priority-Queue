@@ -47,7 +47,6 @@ private:
     void grow();
     void bubbleUp(int childPos);
     void bubbleDown(int parentPos);
-    void HeapPriorityQueue::bubbleDownHelper(int parentPos, bool firstChild);
 };
 
 #endif
