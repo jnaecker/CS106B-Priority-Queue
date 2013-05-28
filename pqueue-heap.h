@@ -41,12 +41,13 @@ public:
 	string dequeueMin();
 
 private:
-	// TODO: Fill this in with the implementation of your binary heap
-	// priority queue.  You can add any fields, types, or methods that you
-	// wish.
-	//
-	// While you are free to implement this as you see fit, you *must* do
-	// all of your own memory management and should not use the Vector.
+    int allocatedLength;
+    int logicalLength;
+    string* elems;
+    void grow();
+    void bubbleUp(int childPos);
+    void bubbleDown(int parentPos);
+    void HeapPriorityQueue::bubbleDownHelper(int parentPos, bool firstChild);
 };
 
 #endif
