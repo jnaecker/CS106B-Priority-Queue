@@ -1,5 +1,7 @@
 /*******************************************************
  * File: pqueue-doublylinkedlist.h
+ * Name: Jeff Naecker
+ * Section: Robert Hintz
  *
  * A priority queue class backed by an unsorted, doubly-linked
  * list.
@@ -15,6 +17,7 @@ using namespace std;
  */
 class DoublyLinkedListPriorityQueue {
 public:
+    
 	/* Constructs a new, empty priority queue backed by a doubly-linked list. */
 	DoublyLinkedListPriorityQueue();
 	
@@ -41,13 +44,19 @@ public:
 	string dequeueMin();
 
 private:
+    
+    /* The recursive cell struct that makes up a linked list. */
     struct Cell {
         string value;
         Cell* next;
         Cell* previous;
     };
     
+    /* Pointer to the start of the list. */
     Cell* head;
+    
+    /* Removes given cell from list. */
+    void remove(Cell* cellToRemove);
 };
 
 #endif
