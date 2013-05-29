@@ -63,8 +63,8 @@ void VectorPriorityQueue::enqueue(string value) {
 }
 
 /* 
- * Function: enqueue(string value)
- * Usage: pqueue.equeue("foo");
+ * Function: peek()
+ * Usage: pqueue.peek();
  * ---------------------------------------------------
  * Returns, but does not remove, the lexicographically 
  * first string in the priority queue.
@@ -89,8 +89,8 @@ string VectorPriorityQueue::peek() {
 }
 
 /* 
- * Function: enqueue(string value)
- * Usage: pqueue.equeue("foo");
+ * Function: dequeueMin()
+ * Usage: pqueue.dequeueMin();
  * ---------------------------------------------------
  * Returns and removes the lexicographically first string 
  * in the priority queue.

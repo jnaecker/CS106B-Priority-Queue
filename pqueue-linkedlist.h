@@ -1,9 +1,12 @@
 /*******************************************************
  * File: pqueue-linkedlist.h
+ * Name: Jeff Naecker
+ * Section: Robert Hintz
  *
  * A priority queue class backed by a sorted, singly-linked
  * list.
  */
+
 #ifndef PQueue_LinkedList_Included
 #define PQueue_LinkedList_Included
 
@@ -14,7 +17,9 @@ using namespace std;
  * singly-linked list.
  */
 class LinkedListPriorityQueue {
+    
 public:
+    
 	/* Constructs a new, empty priority queue backed by a sorted linked list. */
 	LinkedListPriorityQueue();
 	
@@ -41,11 +46,14 @@ public:
 	string dequeueMin();
 	
 private:
+    
+    /* The recursive cell struct that makes up a linked list. */
     struct Cell {
         string value;
         Cell* next;
     };
     
+    /* Pointer to the start of the list. */
     Cell* head;
 };
 
