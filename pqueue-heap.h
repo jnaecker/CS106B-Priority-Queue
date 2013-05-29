@@ -1,5 +1,7 @@
 /**********************************************
  * File: pqueue-heap.h
+ * Name: Jeff Naecker
+ * Section: Robert Hintz
  *
  * A priority queue class backed by a binary
  * heap.
@@ -14,7 +16,9 @@ using namespace std;
  * binary heap.
  */
 class HeapPriorityQueue {
+    
 public:
+    
 	/* Constructs a new, empty priority queue backed by a binary heap. */
 	HeapPriorityQueue();
 	
@@ -41,12 +45,25 @@ public:
 	string dequeueMin();
 
 private:
+    
+    /* Stores the length of the array that holds the heap.*/
     int allocatedLength;
+    
+    /* Stores the actual number of elements in the heap.*/
     int logicalLength;
+    
+    /* The array representing the heap.*/
     string* elems;
+    
+    /* Grows the array when more space is needed.*/
     void grow();
+    
+    /* Method to bubble up a newly-placed node to get a valid heap. */
     void bubbleUp(int childPos);
+    
+    /* Method to bubble down a node to get a valid heap. */
     void bubbleDown(int parentPos);
+    
 };
 
 #endif
