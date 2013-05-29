@@ -1,6 +1,8 @@
 /**********************************************
  * File: pqueue-vector.h
- *
+ * Name: Jeff Naecker
+ * Section: Robert Hintz
+ 
  * A priority queue class backed by an unsorted
  * vector.
  */
@@ -15,7 +17,9 @@ using namespace std;
  * unsorted Vector.
  */
 class VectorPriorityQueue {
+    
 public:
+    
 	/* Constructs a new, empty priority queue backed by a vector. */
 	VectorPriorityQueue();
 	
@@ -42,6 +46,8 @@ public:
 	string dequeueMin();
 
 private:
+    
+    /* The vector of strings backing the p-queue. */
 	Vector<string> elems;
     
 };
